@@ -1,0 +1,19 @@
+{
+    "name": "The Blue Pixel",
+    "description": "True Blue Pixel",
+    "image": "https://ipfs.io/ipfs/QmYnVBwse3Gk6CJkbEsqSPSCD9Zwe1HdQ9dcCDXhbmvgGf?filename=blue_pixel.png",
+    "attributes": [
+        {
+            "trait_type": "Color",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Width",
+            "value": 100
+        },
+        {
+            "trait_type": "Heigth",
+            "value": 100
+        }
+    ]
+}
