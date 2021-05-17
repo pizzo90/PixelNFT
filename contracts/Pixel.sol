@@ -83,9 +83,10 @@ contract Pixel is ERC721, VRFConsumerBase, Ownable {
         override
     {
         uint256 newId = pixels.length;
-        uint256 height = (randomNumber % 100);
-        uint256 width = ((randomNumber % 10000) / 100 );
-        uint256 color = (randomNumber % 6);
+        uint256 height = 100;
+        uint256 width = 100;
+        uint256 color = ((randomNumber % 1000000) / 1);
+
         pixels.push(
             Pixel(
                 height,

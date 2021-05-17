@@ -1,5 +1,6 @@
 const Pixel = artifacts.require('Pixel')
 const fs = require('fs')
+const { exit } = require('process')
 
 const metadataTemple = {
     "name": "",
@@ -25,9 +26,10 @@ module.exports = async callback => {
     length = await pixel.getNumberOfPixels()
     index = 0
     while (index < length) {
-        console.log('Let\'s get the overview of your pixel ' + index + ' of ' + length)
+        console.log('Let\'s get the overview of the pixels ' + index + ' of ' + length)
         let pixelMetadata = metadataTemple
-        let characterOverview = await pixel.pixels(index)
+        let pixelOverview
+        console.log(pixelOverview = await pixel.pixels(index));
         index++
         pixelMetadata['name'] = pixelOverview['name']
         if (fs.existsSync('metadata/' + pixelMetadata['name'].toLowerCase().replace(/\s/g, '-') + '.json')) {
