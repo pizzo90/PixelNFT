@@ -11,6 +11,7 @@ contract Pixel is ERC721, VRFConsumerBase, Ownable {
     using SafeMath for uint256;
     using Strings for string;
 
+
     bytes32 internal keyHash;
     uint256 internal fee;
     uint256 public randomResult;
