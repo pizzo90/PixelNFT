@@ -3,6 +3,6 @@ const Pixel = artifacts.require('Pixel')
 module.exports = async callback => {
   const pixel = await Pixel.deployed()
   console.log('Creating requests on contract:', pixel.address)
-  const tx = await pixel.requestNewRandomPixel(88888888, "THESECOND")
+  const tx = await pixel.requestNewRandomPixel(3443242343, "THETHIRD")
   callback(tx.tx)
 }

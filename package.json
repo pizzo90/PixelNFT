@@ -1,10 +1,10 @@
 {
-  "name": "@chainlink/box",
+  "name": "@pizzo90/pixelnft",
   "version": "0.6.0",
-  "description": "A Chainlink example in a Truffle box",
+  "description": "ERC721 Pixel Implementation",
   "scripts": {
     "compile": "npx truffle compile",
-    "console:dev": "npx truffle console --network cldev",
+    "console:dev": "npx truffle console --network rinkeby",
     "console:live": "npx truffle console --network live",
     "depcheck": "echo '@chainlink/box' && depcheck --ignore-dirs=build/contracts || true",
     "solhint": "solhint ./contracts/**/*.sol",
@@ -18,7 +18,9 @@
     "@chainlink/contracts": "0.0.8",
     "@openzeppelin/contracts": "^3.1.0",
     "@truffle/hdwallet-provider": "^1.0.40",
-    "dotenv": "^8.2.0"
+    "canvas": "^2.8.0",
+    "dotenv": "^8.2.0",
+    "rgb-to-hex": "^0.0.0"
   },
   "devDependencies": {
     "@chainlink/belt": "^0.0.1",
@@ -26,6 +28,7 @@
     "@openzeppelin/test-helpers": "^0.5.6",
     "chai": "^4.2.0",
     "depcheck": "^0.9.1",
+    "js-image-generator": "^1.0.3",
     "solhint": "^2.1.0",
     "truffle": "^5.1.5",
     "truffle-plugin-verify": "^0.5.8"

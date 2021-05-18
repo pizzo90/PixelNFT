@@ -23,7 +23,10 @@ contract Pixel is ERC721, VRFConsumerBase, Ownable {
     struct Pixel {
         uint256 height;
         uint256 width;
-        uint256 color;
+        uint256 randomicity;
+        uint256 red;
+        uint256 green;
+        uint256 blue;
         string name;
     }
 
@@ -85,13 +88,19 @@ contract Pixel is ERC721, VRFConsumerBase, Ownable {
         uint256 newId = pixels.length;
         uint256 height = 100;
         uint256 width = 100;
-        uint256 color = ((randomNumber % 1000000) / 1);
+        uint256 randomicity = randomNumber;
+        uint256 red = ((randomNumber % 1000) % 256);
+        uint256 green = (((randomNumber % 100000) / 100) % 256);
+        uint256 blue = (((randomNumber % 10000000) / 10000) % 256);
 
         pixels.push(
             Pixel(
                 height,
                 width,
-                color,
+                randomicity,
+                red,
+                green,
+                blue,
                 requestToPixelName[requestId]
             )
         );
@@ -107,12 +116,17 @@ contract Pixel is ERC721, VRFConsumerBase, Ownable {
         view
         returns (
             string memory,
+            uint256,
+            uint256,
             uint256
+
         )
     {
         return (
             pixels[tokenId].name,
-            pixels[tokenId].width + pixels[tokenId].height + pixels[tokenId].color
+            pixels[tokenId].width + pixels[tokenId].height,
+            pixels[tokenId].randomicity,
+            pixels[tokenId].red + pixels[tokenId].green + pixels[tokenId].blue
         );
     }
 
@@ -122,22 +136,19 @@ contract Pixel is ERC721, VRFConsumerBase, Ownable {
         returns (
             uint256,
             uint256,
-            uint256
-        )
+            uint256,
+            uint256,
+            uint256,
+            uint256        
+            )
     {
         return (
             pixels[tokenId].width,
             pixels[tokenId].height,
-            pixels[tokenId].color
+            pixels[tokenId].randomicity,
+            pixels[tokenId].red,
+            pixels[tokenId].green,
+            pixels[tokenId].blue
         );
-    }
-
-    function sqrt(uint256 x) internal view returns (uint256 y) {
-        uint256 z = (x + 1) / 2;
-        y = x;
-        while (z < y) {
-            y = z;
-            z = (x / z + z) / 2;
-        }
     }
 }

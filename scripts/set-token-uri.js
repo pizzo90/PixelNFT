@@ -1,3 +1,8 @@
+/*
+ * @dev SET TOKEN URI THAT IS MANDATORY FOR THE ERC721 
+ * to be human-readable, sellable, and owned!
+ */
+
 const Pixel = artifacts.require('Pixel')
 const TOKENID = 0
 module.exports = async callback => {
