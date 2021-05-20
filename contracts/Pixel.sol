@@ -14,6 +14,7 @@ contract Pixel is ERC721, VRFConsumerBase, Ownable {
 
     bytes32 internal keyHash;
     uint256 internal fee;
+    uint256 internal test;
     uint256 public randomResult;
     address public VRFCoordinator;
     // rinkeby: 0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B

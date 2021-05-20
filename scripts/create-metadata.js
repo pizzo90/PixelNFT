@@ -66,13 +66,7 @@ module.exports = async callback => {
         ctx.fillStyle = "#" + colorHex;
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
         const buffer = canvas.toBuffer("image/png");
-        fs.writeFileSync(filename + '.png', buffer);
-    
-        
-
-
-
-
+        fs.writeFileSync(filename + '.png', buffer)
 
     }
     callback(pixel)
