@@ -34,7 +34,7 @@ class App extends Component {
     let index = 0;
     let images = [];
     while(index < minedPixels) {
-      let token = await contract.methods.pixels(index).call();
+      let tokens = await contract.methods.pixels(index).call();
       let tokenURI = await contract.methods.tokenURI(index).call().then(
         res => {
           if(res.length > 0){
@@ -52,9 +52,8 @@ class App extends Component {
       );
       index++;
     }
-    console.log(images);
-    const response = await contract.methods.getNumberOfPixels().call();
-    this.setState({ pixelsN: response, pixelImages: images });
+    let pixelsNumber = await contract.methods.getNumberOfPixels().call();
+    this.setState({ pixelsN: pixelsNumber, pixelImages: images });
   };
   render() {
     if (!this.state.web3 && !this.state.pixelImages) {
@@ -68,10 +67,10 @@ class App extends Component {
         <div className="Pixels">
           {(() => {
             if(!this.state.pixelImages) {
-              return (<div>.....Loading Pixels....</div>)
+              return (<div>[.....Loading Pixels.....]</div>)
             }else{
-              return this.state.pixelImages.map(function(value){
-                return <img src={value}/>;
+              return this.state.pixelImages.map(function(value,index){
+                return <img key={index} src={value}/>;
               })
             } 
           })()}

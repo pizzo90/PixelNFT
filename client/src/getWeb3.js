@@ -5,6 +5,7 @@ const getWeb3 = () =>
     // Wait for loading completion to avoid race conditions with web3 injection timing.
     window.addEventListener("load", async () => {
       // Modern dapp browsers...
+      /**
       if (window.ethereum) {
         const web3 = new Web3(window.ethereum);
         try {
@@ -25,13 +26,14 @@ const getWeb3 = () =>
       }
       // Fallback to localhost; use dev console port by default...
       else {
+        */
         const provider = new Web3.providers.HttpProvider(
           "https://rinkeby.infura.io/v3/82eab7a8890f47988b29489cbb398289"
         );
         const web3 = new Web3(provider);
         console.log("No web3 instance injected, using Local web3.");
         resolve(web3);
-      }
+      //}
     });
   });
 
