@@ -4,6 +4,13 @@ import getWeb3 from "./getWeb3";
 import Axios from "axios";
 import "./App.css";
 
+import Header from "./header";
+import FirstSection from "./firstsection";
+import SecondSection from "./secondsection.js";
+
+
+
+
 class App extends Component {
   state = { pixelsN: 0, web3: null, accounts: null, contract: null, pixelImages: null };
   componentDidMount = async () => {
@@ -56,28 +63,31 @@ class App extends Component {
     this.setState({ pixelsN: pixelsNumber, pixelImages: images });
   };
   render() {
-    if (!this.state.web3 && !this.state.pixelImages) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
+   
     return (
       <div className="App">
+      
+      <Header/> 
+      <FirstSection/>
+      <SecondSection/>
+
         <h1>Good to Go!</h1>
-        <p>Connected to smart contract PIXELS [PxP].</p>
-        <div>Number of created Pixels: {this.state.pixelsN}</div>
-        <div className="Pixels">
-          {(() => {
-            if(!this.state.pixelImages) {
-              return (<div>[.....Loading Pixels.....]</div>)
-            }else{
-              return this.state.pixelImages.map(function(value,index){
-                return <img key={index} src={value}/>;
-              })
-            } 
-          })()}
-        </div>
+            <p>Connected to smart contract PIXELS [PxP].</p>
+            <div>Number of created Pixels: {this.state.pixelsN}</div>
+            <div className="Pixels">
+              {(() => {
+                if(!this.state.pixelImages) {
+                  return (<div>[.....Loading Pixels.....]</div>)
+                }else{
+                  return this.state.pixelImages.map(function(value,index){
+                    return <img key={index} src={value}/>;
+                  })
+                } 
+              })()}
+            </div>
       </div>
-    );
-  }
+   
+    )}
 }
 
 export default App;

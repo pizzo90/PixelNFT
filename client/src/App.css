@@ -20,3 +20,106 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+
+/* ----------------- header */
+.logo span{
+font-weight: 800;
+font-size: 2em;
+padding: 10px 0px;
+}
+.logo{
+  width: 200px;
+  float: left;
+}
+.main-menu{
+ max-width: 500px;
+ float: right;
+}
+.main-menu ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.main-menu ul li {
+  float: left;
+  padding: 10px 20px;
+}
+
+/* ----------------- home */
+
+#main-home{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+#main-home:before{
+  content: '';
+  width: 50%;
+  height: 70vh;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #70dce047;
+  z-index: -1;
+}
+
+.inner-main-txt{
+  position: relative;
+} 
+
+.main-tit{
+  font-size: 20em;
+  margin: 0px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+button{
+  background: #0CAAD0;
+  padding: 10px 25px;
+  color: white;
+  font-size: 1.2em;
+  border: 0px;
+  margin-top: 1em;
+}
+
+
+
+
+
+
+.first-pix{
+  width: 280px;
+  height: 280px;
+  background: #70E0B9;
+  position: absolute;
+  top: 280px;
+  left: -240px;
+}
+
+.second-pix{
+  width: 220px;
+  height: 220px;
+  background: #7074E0;
+  position: absolute;
+  top: -41px;
+  right: -40px;
+  z-index: -1;
+}
+
+
+.third-pix{
+  width: 70px;
+    height: 70px;
+    background: #8A22A3;
+    position: absolute;
+    top: -56px;
+    right: -76px;
+    z-index: -1;
+}
