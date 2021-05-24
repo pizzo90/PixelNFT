@@ -1,29 +1,34 @@
-
 import React, { Component } from 'react'
 
 export default class PixelArea extends Component {
+    state = { grid: null};
     componentDidMount = async () => {
-        let number = 1000;
-        function ListaNumeri(props) {
-            const numeri = props.numeri;
-            const lista = numeri.map((numero) =>
-              <Numero key={numero.toString()}
-                      valore={numero} />
-            );
-    
-    
+        this.setState({},this.grid());
     }
 
+
+    grid = () => {
+        let gridDivs = 400;
+        let grid = [];
+        let i = 1;
+        for(i; i<= gridDivs; i++){
+            grid.push(<div className='pixel' key={i}></div>)
+        }
+        this.setState({grid: grid})
+    }
+    
     render() {
         return (
         <>
-          <h2>pm</h2>
-    
-        </>
+            <section id="2-section">
+                <div className="col-md-4">
+                    {this.state.grid}
+                </div>    
+                <div className="col-md-8">
+                 </div>   
+
+            </section>
+    </>
         )
     }
-    
 }
-
-
-
