@@ -6,9 +6,9 @@ export default class firstsection extends Component {
         return (
         <>
             <nav>
-                <div class="logo"><span>PIXEL</span></div> 
+                <div className="logo"><span>PIXEL</span></div> 
 
-                <div class="main-menu">
+                <div className="main-menu">
                  <ul>
                      <li>Primo</li>
                      <li>Secondo</li>
