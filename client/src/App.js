@@ -45,6 +45,7 @@ class App extends Component {
       let tokenURI = await contract.methods.tokenURI(index).call().then(
         res => {
           if(res.length > 0){
+            console.log(res);
             Axios.get(res).then(
               response => {
                  images.push(response.data.image); 
@@ -59,6 +60,7 @@ class App extends Component {
       );
       index++;
     }
+    
     let pixelsNumber = await contract.methods.getNumberOfPixels().call();
     this.setState({ pixelsN: pixelsNumber, pixelImages: images });
   };

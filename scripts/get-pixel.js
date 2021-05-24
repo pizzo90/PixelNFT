@@ -3,7 +3,7 @@ const Pixel = artifacts.require('Pixel')
 module.exports = async callback => {
     const pixel = await Pixel.deployed()
     console.log('Let\'s get the overview of your pixel')
-    const overview = await pixel.pixels(1)
+    const overview = await pixel.pixels(2)
     console.log(overview)
     callback(overview.tx)
 }

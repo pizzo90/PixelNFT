@@ -18,6 +18,7 @@
     "@chainlink/contracts": "0.0.8",
     "@openzeppelin/contracts": "^3.1.0",
     "@truffle/hdwallet-provider": "^1.0.40",
+    "axios": "^0.20.0",
     "canvas": "^2.8.0",
     "dotenv": "^8.2.0",
     "rgb-to-hex": "^0.0.0"
