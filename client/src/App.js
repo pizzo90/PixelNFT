@@ -3,10 +3,11 @@ import PixelContract from "./contracts/Pixel.json";
 import getWeb3 from "./getWeb3";
 import Axios from "axios";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./header";
 import FirstSection from "./firstsection";
-import SecondSection from "./secondsection.js";
+import PixelArea from "./pixelarea";
 
 
 
@@ -71,7 +72,26 @@ class App extends Component {
       
       <Header/> 
       <FirstSection/>
-      <SecondSection/>
+
+      <section id="2-section">
+        <div className="container-fluid">
+          <div className="row">
+              <div className="col-md-4">
+                  <div className="txt-inner">
+                    <h2>Lorem Ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                   </div> 
+              </div>    
+              <div className="col-md-8">
+                <PixelArea/>
+              </div>  
+           </div>    
+        </div>
+      </section>
+
+
 
         <h1>Good to Go!</h1>
             <p>Connected to smart contract PIXELS [PxP].</p>
