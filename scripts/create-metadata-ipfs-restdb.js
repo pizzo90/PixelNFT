@@ -164,7 +164,7 @@ module.exports = async callback => {
                 "pixelIndex": index,
                 "data": {
                     "height": 100,
-                    "height": 100,  
+                    "width": 100,
                     "red": pixelOverview['red']['words'][0],
                     "green": pixelOverview['green']['words'][0],
                     "blue": pixelOverview['blue']['words'][0],
