@@ -20,15 +20,10 @@ export default class PixelArea extends Component {
     render() {
         return (
         <>
-            <section id="2-section">
-                <div className="col-md-4">
+            
                     {this.state.grid}
-                </div>    
-                <div className="col-md-8">
-                 </div>   
-
-            </section>
-    </>
+            
+        </>
         )
     }
 }

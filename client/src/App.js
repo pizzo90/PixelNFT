@@ -73,24 +73,62 @@ class App extends Component {
       <Header/> 
       <FirstSection/>
 
-      <section id="2-section">
-        <div className="container-fluid">
-          <div className="row">
-              <div className="col-md-4">
-                  <div className="txt-inner">
-                    <h2>Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                   </div> 
-              </div>    
+      <section id="2section">
+        <div className="container">
+          <div className="row d-flex">
               <div className="col-md-8">
-                <PixelArea/>
-              </div>  
+                  <div className="txt-inner">
+                    <h2 className="subTit">Lorem Ipsum</h2>
+                    <div class="Boxtextpixel">
+                      <div className="row d-flex">
+                          <div className="col-md-3 align-c">
+                            <img className="img-icon" src="https://img.icons8.com/ios/452/bitcoin.png"></img>
+                          </div>  
+                          <div className="col-md-9 align-c">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+                        <div className="row d-flex">
+                          <div className="col-md-3 align-c">
+                            <img className="img-icon" src="https://img.icons8.com/ios/452/bitcoin.png"></img>
+                          </div>  
+                          <div className="col-md-9 align-c">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+                        <div className="row d-flex">
+                          <div className="col-md-3 align-c">
+                            <img className="img-icon" src="https://img.icons8.com/ios/452/bitcoin.png"></img>
+                          </div>  
+                          <div className="col-md-9 align-c">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+                     </div> 
+                   </div> 
+              </div> 
+              <div className="col-md-4 align-c">
+                <div className="ExaplePix">
+                </div> 
+              </div>   
            </div>    
         </div>
       </section>
 
+
+
+      <section id="3-section">
+        <div className="container-fluid">
+          <div className="row"> 
+            <div className="pixel-content" id="Mydiv">
+                
+                <PixelArea/>
+              
+              
+              </div>    
+           </div>    
+        </div>
+      </section>
 
 
         <h1>Good to Go!</h1>
@@ -111,5 +149,7 @@ class App extends Component {
    
     )}
 }
+
+
 
 export default App;
