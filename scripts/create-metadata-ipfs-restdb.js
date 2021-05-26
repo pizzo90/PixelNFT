@@ -77,7 +77,7 @@ module.exports = async callback => {
             url: 'https://pixels-d687.restdb.io/rest/pixels?q=' + dataToSearch,
             headers: { 
                 'Content-Type': 'application/json', 
-                'x-apikey': '86f0bf6684ea418ff631672ffc618ba326e65'
+                'x-apikey': process.env.RESTDB_API_KEY
             },
             data : data
         };
@@ -178,7 +178,7 @@ module.exports = async callback => {
                 url: 'https://pixels-d687.restdb.io/rest/pixels',
                 headers: { 
                     'Content-Type': 'application/json', 
-                    'x-apikey': '86f0bf6684ea418ff631672ffc618ba326e65'
+                    'x-apikey': process.env.RESTDB_API_KEY
                 },
                 data : data
             };
