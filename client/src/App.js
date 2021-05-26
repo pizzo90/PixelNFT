@@ -75,39 +75,20 @@ class App extends Component {
 
       <section id="2section">
         <div className="container">
+        <h2 className="subTit">Lorem Ipsum</h2>
           <div className="row d-flex">
-              <div className="col-md-8">
+              <div className="col-md-6  align-c">
                   <div className="txt-inner">
-                    <h2 className="subTit">Lorem Ipsum</h2>
                     <div class="Boxtextpixel">
-                      <div className="row d-flex">
-                          <div className="col-md-3 align-c">
-                            <img className="img-icon" src="https://img.icons8.com/ios/452/bitcoin.png"></img>
-                          </div>  
-                          <div className="col-md-9 align-c">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                          </div> 
-                        </div> 
                         <div className="row d-flex">
-                          <div className="col-md-3 align-c">
-                            <img className="img-icon" src="https://img.icons8.com/ios/452/bitcoin.png"></img>
-                          </div>  
-                          <div className="col-md-9 align-c">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                          </div> 
-                        </div> 
-                        <div className="row d-flex">
-                          <div className="col-md-3 align-c">
-                            <img className="img-icon" src="https://img.icons8.com/ios/452/bitcoin.png"></img>
-                          </div>  
-                          <div className="col-md-9 align-c">
+                          <div className="col-md-12 align-c">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                           </div> 
                         </div> 
                      </div> 
                    </div> 
               </div> 
-              <div className="col-md-4 align-c">
+              <div className="col-md-6 align-c">
                 <div className="ExaplePix">
                 </div> 
               </div>   

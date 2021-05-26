@@ -86,11 +86,15 @@ padding: 10px 0px;
   background: #70dce047;
   z-index: -1;
 }
-
+.mainbutton{
+  margin-top: 100px;
+}
 .inner-main-txt{
   position: relative;
 } 
-
+.main-home .container{
+  overflow: hidden;
+}
 .main-tit{
   font-size: 20em;
   margin: 0px;
@@ -142,7 +146,7 @@ button{
     z-index: -1;
 }
 
-
+/* ----------------- Pre Pixel area  */
 
 .Boxtextpixel p{
   font-size: 1.5em;
@@ -154,11 +158,13 @@ button{
 
 .subTit{
   font-weight: 800;
+  font-size: 6em;
+  margin-bottom: 0.8em;
 }
 
 .ExaplePix{
-  width: 300px;
-  height: 300px;
+  width: 90%;
+  aspect-ratio: 1;
   background-color: #0CAAD0;
 }
 
@@ -190,4 +196,15 @@ button{
 
 .pixel:nth-child(2n) {
   margin-top: -3em;
+}
+
+
+
+
+
+/* ----------------- Responsive */
+@media screen and (max-width: 992px) {
+  .main-tit{
+    font-size: 8em;
+  }
 }
