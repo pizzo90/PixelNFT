@@ -156,6 +156,7 @@ module.exports = async callback => {
                 return true;
             },err => {
                 console.log("ERROR",err);
+                return false;
             }
         )
         if(tx){
