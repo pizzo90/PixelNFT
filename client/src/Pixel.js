@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal";
 
 export default class Pixel extends Component {
-   
-    constructor(props){
+   constructor(props){
         super(props);
         this.handleShow = this.handleShow.bind(this);
 		this.handleClose = this.handleClose.bind(this);
