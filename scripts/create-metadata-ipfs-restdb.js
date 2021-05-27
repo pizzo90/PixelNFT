@@ -45,12 +45,13 @@ const metadataTemple = {
 const savedPixelTemplate = {
     "pixelIndex": 0,
     "data": {
+        "name": "",
         "red": 0,
         "green": 0,
         "blue": 0,
         "birthday": "",
         "ERC721TokenUri": "",
-        "metadata": ""
+        "metadata": "",
     }
 }
 
@@ -164,6 +165,7 @@ module.exports = async callback => {
             let data = JSON.stringify({
                 "pixelIndex": index,
                 "data": {
+                    "name": pixelOverview['name'],
                     "height": 100,
                     "width": 100,
                     "red": pixelOverview['red']['words'][0],
