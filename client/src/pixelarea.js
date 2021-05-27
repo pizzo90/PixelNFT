@@ -1,54 +1,63 @@
-import React, { Component } from 'react'
-import Modal from './modalpixel';
-
-
+import React, { Component } from 'react';
+import Axios from 'axios';
+import Pixel from './Pixel';
+const numberofPixels = 400;
 
 export default class PixelArea extends Component {
-    state = { grid: null, showModal: false};
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-          show: false
+          grid: null, 
+          pixelsSketelonArray: null
         };
-        this.showModal = this.showModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);
-      }
+    }
     componentDidMount = async () => {
-        this.setState({},this.grid());
+        this.setState({},this.pixelGrid());
     }
 
+    pixelGrid = () => {
+      let gridDivs = numberofPixels;
+      let pixels = [];
+      let i = 0;
+      for(i; i<= gridDivs; i++){
+        let pixelElm = {"name": "ssdds"+i, "pixelId": i, "blue": null, "red": null, "green": null};
+        pixels.push(pixelElm);
+      }
+      let grid = null
+      let pixelsList = pixels.map((pixel) => <Pixel name={pixel.name} key={pixel.pixelId} pixelId={pixel.pixelId} />)
+      this.setState({grid: grid, pixelsSkeletonArray: pixelsList})
+    }    
 
-    showModal = () => {
-        this.setState({ show: true });
-      };
-    
-      hideModal = () => {
-        this.setState({ show: false });
-      };
 
-
-    grid = () => {
-        let gridDivs = 400;
-        let grid = [];
-        let i = 1;
-        for(i; i<= gridDivs; i++){
-            grid.push(<div className='pixel' key={i} onClick={this.showModal}></div>)
+    mintedPixels = () => {
+      let mintedPixels = [];
+      let config = {
+        method: 'get',
+        url: 'https://pixels-d687.restdb.io/rest/pixels',
+        headers: { 
+          'x-api-key': '86f0bf6684ea418ff631672ffc618ba326e65', 
+          'Content-Type': 'application/json'
         }
-        this.setState({grid: grid})
+      };
+      Axios(config)
+        .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        return response.data;
+      })
+        .catch(function (error) {
+        console.log(error);
+      });
     }
-    
 
     render() {
+        if(!this.state.pixelsSkeletonArray){
+          return <div className="loading">LOADING</div>
+        } else {
         return (
         <>
-            
-                    {this.state.grid}
-            
-        <Modal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-        </Modal>
-
+        {this.state.pixelsSkeletonArray}
         </>
         )
     }
+  }
 }

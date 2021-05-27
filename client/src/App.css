@@ -186,7 +186,8 @@ button{
 }
 
 .pixel{
-  border: 1px solid;
+  border: 2px dotted grey;
+  opacity: 50%;
   background: #70E0B9;
   width: 100px;
   margin: 15px;

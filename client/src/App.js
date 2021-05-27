@@ -5,12 +5,9 @@ import Axios from "axios";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Header from "./header";
-import FirstSection from "./firstsection";
-import PixelArea from "./pixelarea";
-
-
-
+import Header from "./Header";
+import FirstSection from "./FirstSection";
+import PixelArea from "./PixelArea";
 
 class App extends Component {
   state = { pixelsN: 0, web3: null, accounts: null, contract: null, pixelImages: null };
@@ -46,7 +43,6 @@ class App extends Component {
       let tokenURI = await contract.methods.tokenURI(index).call().then(
         res => {
           if(res.length > 0){
-            console.log(res);
             Axios.get(res).then(
               response => {
                  images.push(response.data.image); 
@@ -69,17 +65,15 @@ class App extends Component {
    
     return (
       <div className="App">
-      
       <Header/> 
       <FirstSection/>
-
-      <section id="2section">
+      <section id="2-section">
         <div className="container">
         <h2 className="subTit">Lorem Ipsum</h2>
           <div className="row d-flex">
               <div className="col-md-6  align-c">
                   <div className="txt-inner">
-                    <div class="Boxtextpixel">
+                    <div className="Boxtextpixel">
                         <div className="row d-flex">
                           <div className="col-md-12 align-c">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -96,23 +90,24 @@ class App extends Component {
         </div>
       </section>
 
-
-
       <section id="3-section">
         <div className="container-fluid">
           <div className="row"> 
-            <div className="pixel-content" id="Mydiv">
-                
+            <div className="pixel-content" id="pixels-grid">
                 <PixelArea/>
-              
-              
               </div>    
            </div>    
         </div>
       </section>
+      </div>
+    )}
+}
+
+export default App;
 
 
-        <h1>Good to Go!</h1>
+/**
+ * <h1>Good to Go!</h1>
             <p>Connected to smart contract PIXELS [PxP].</p>
             <div>Number of created Pixels: {this.state.pixelsN}</div>
             <div className="Pixels">
@@ -126,11 +121,4 @@ class App extends Component {
                 } 
               })()}
             </div>
-      </div>
-   
-    )}
-}
-
-
-
-export default App;
+ */
