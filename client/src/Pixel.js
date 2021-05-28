@@ -1,9 +1,11 @@
+import { prototype } from '@truffle/hdwallet-provider';
 import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal";
 
 export default class Pixel extends Component {
    constructor(props){
         super(props);
+        console.log(props)
         this.handleShow = this.handleShow.bind(this);
 		this.handleClose = this.handleClose.bind(this);
         this.state = {
@@ -12,7 +14,8 @@ export default class Pixel extends Component {
             green: props.green,
             blue: props.blue,
             id: props.pixelId,
-            showModal: false
+            showModal: false,
+            minted: props.minted
         }
     }
 
@@ -30,10 +33,28 @@ export default class Pixel extends Component {
 	}
     
     render(){
+        if(!this.state.minted){
+            return(
+            <div className="pixel-wrapper">
+                <div className="pixel skeleton" key={this.state.id}>
+                </div>
+            </div>
+            )
+        }
         return (
         <div className="pixel-wrapper">
-            <div className="pixel" onClick={this.handleShow} key={this.state.id}>
-                <span>{this.state.id}</span>     
+            <div 
+                className="pixel minted" 
+                style={
+                    {width: '100px', 
+                    height: '100px',
+                    backgroundColor: 'rgb(' + this.state.red + ', ' + this.state.green + ', ' + this.state.blue + ')',
+                    opacity: "100%",    
+                    }
+                }
+                onClick={this.handleShow} 
+                key={this.state.id}>
+                    <span>{this.state.id}</span>     
             </div>
             <Modal show={this.state.showModal} onHide={this.handleClose}>
                 <Modal.Header closeButton>

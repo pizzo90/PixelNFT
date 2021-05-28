@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 
-export default class firstsection extends Component {
+export default class FirstSection extends Component {
     render() {
         return (
         <>
