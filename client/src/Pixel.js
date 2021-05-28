@@ -1,6 +1,7 @@
 import { prototype } from '@truffle/hdwallet-provider';
 import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal";
+import {CSSTransition} from 'react-transition-group';
 
 export default class Pixel extends Component {
    constructor(props){
@@ -15,7 +16,8 @@ export default class Pixel extends Component {
             blue: props.blue,
             id: props.pixelId,
             showModal: false,
-            minted: props.minted
+            minted: props.minted,
+            inProp: props.animate
         }
     }
 
@@ -41,21 +43,25 @@ export default class Pixel extends Component {
             </div>
             )
         }
-        return (
+        return (     
         <div className="pixel-wrapper">
+            <CSSTransition appear={true} in={true} timeout={2000} classNames="fade">
             <div 
-                className="pixel minted" 
+                className="pixel-minted" 
                 style={
-                    {width: '100px', 
+                    {
+                    width: '100px', 
                     height: '100px',
                     backgroundColor: 'rgb(' + this.state.red + ', ' + this.state.green + ', ' + this.state.blue + ')',
-                    opacity: "100%",    
+                    border: 0,
+                    //opacity: "100",    
                     }
                 }
                 onClick={this.handleShow} 
                 key={this.state.id}>
                     <span>{this.state.id}</span>     
             </div>
+            </CSSTransition>
             <Modal show={this.state.showModal} onHide={this.handleClose}>
                 <Modal.Header closeButton>
 			    <Modal.Title>Modal heading</Modal.Title>
@@ -69,6 +75,7 @@ export default class Pixel extends Component {
 		        </Modal.Footer>
 		</Modal>
         </div>
+        
         )        
     }
 }
