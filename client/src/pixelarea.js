@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Pixel from './Pixel';
-const numberofPixels = 400;
+const numberofPixelsSkeleton = 200;
 
 export default class PixelArea extends Component {
     constructor(props) {
@@ -17,7 +17,7 @@ export default class PixelArea extends Component {
     }
 
     pixelGrid = () => {
-      let gridDivs = numberofPixels;
+      let gridDivs = numberofPixelsSkeleton;
       let pixels = [];
       let i = 0;
       for(i; i<= gridDivs; i++){
