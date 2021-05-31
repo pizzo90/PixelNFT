@@ -218,9 +218,28 @@ button{
 
 }
 
+.pixel-minted{
+  border: 2px dotted grey;
+  background: #70E0B9;
+  width: 100px;
+  margin: 15px;
+  height: 100px;
+
+}
+
 .pixel:nth-child(2n) {
   margin-top: -3em;
 }
+
+.fade-appear {
+    opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 2000ms ease-in;
+}
+
 
 /* ----------------- Responsive */
 @media screen and (max-width: 992px) {

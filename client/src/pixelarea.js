@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Pixel from './Pixel';
+import {Transition} from 'react-transition-group';
 const numberofPixelsSkeleton = 200;
 
 export default class PixelArea extends Component {
@@ -53,7 +54,8 @@ export default class PixelArea extends Component {
                   red={pixel1.data.red} 
                   green={pixel1.data.green} 
                   blue={pixel1.data.blue} 
-                  pixelId={pixel1.pixelIndex} 
+                  pixelId={pixel1.pixelIndex}
+                  animate="true"
                   name={pixel1.data.name} /> 
                 )})
             },err => {
@@ -62,9 +64,9 @@ export default class PixelArea extends Component {
           ) 
       }
     
-      colorPixels = () => {
-          return this.state.mintedPixels;
-      }
+    colorPixels = () => {
+      return this.state.mintedPixels;
+    }
 
     render() {
         if(!this.state.pixelsSkeletonArray){
