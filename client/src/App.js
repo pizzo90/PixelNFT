@@ -82,26 +82,27 @@ class App extends Component {
                           </div> 
                         </div> 
 
-                        <div className="row">
+                        <div className="row icon-2">
                         <hr></hr>
-                          <div className="col-md-12 mtop100">
-                            <h2><b>1 Pixel every day</b></h2>
+                          <div className="col-md-12  mtop100 mbot100">
+                            <h2><b>RGB colors</b></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                           </div> 
                         </div> 
 
-                        <div className="row">
+                        <div className="row icon-3">
                         <hr></hr>
-                          <div className="col-md-12 mtop100">
-                            <h2><b>Random color</b></h2>
+                          <div className="col-md-12 mtop100 mbot100">
+                            <h2><b>1 PIXEL every day</b></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                           </div> 
                         </div> 
 
-                        <div className="row">
+
+                        <div className="row icon-2">
                         <hr></hr>
-                          <div className="col-md-12 mtop100">
-                            <h2><b>Random color</b></h2>
+                          <div className="col-md-12  mtop100 mbot100">
+                            <h2><b>RGB colors</b></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                           </div> 
                         </div> 
