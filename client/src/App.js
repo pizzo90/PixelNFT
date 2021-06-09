@@ -105,7 +105,7 @@ class App extends Component {
                         <hr></hr>
                           <div className="col-md-12  mtop100 mbot100">
                              
-                            <h2><b>RGB colors</b></h2>
+                            <h2><b>ERC721 TOKEN</b></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                           
                           

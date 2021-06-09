@@ -297,6 +297,13 @@ hr:not([size]) {
   .main-tit{
     font-size: 8em;
   }
+  .row.icon-1:before,
+  .row.icon-2:before,
+  .row.icon-3:before,
+  .row.icon-4:before {
+    margin-left: 0px;
+  }
+
 }
 
 @media screen and (max-width: 661px) {
@@ -305,7 +312,7 @@ hr:not([size]) {
   right: -45px;
 }
 .four-pix{
-  right: -350px;
+  right: -320px;
 }
 
 }
