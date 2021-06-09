@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import { animations } from 'react-animation'
 
 
 export default class FirstSection extends Component {
@@ -21,7 +22,7 @@ export default class FirstSection extends Component {
             </section>
 
     </>
-    
+
 
         )
     }
