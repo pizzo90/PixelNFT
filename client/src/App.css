@@ -185,9 +185,9 @@ button{
  
 }
 
-.pixel{
+.skeleton{
   border: 2px dotted grey;
-  opacity: 50%;
+  opacity: 0.50;
   background: #70E0B9;
   width: 100px;
   margin: 15px;
@@ -195,13 +195,12 @@ button{
 
 }
 
-.pixel-minted{
+.minted{
   border: 2px dotted grey;
   background: #70E0B9;
   width: 100px;
   margin: 15px;
   height: 100px;
-
 }
 
 .pixel:nth-child(2n) {
