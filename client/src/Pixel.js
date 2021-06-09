@@ -64,7 +64,7 @@ export default class Pixel extends Component {
             </CSSTransition>
             <Modal show={this.state.showModal} onHide={this.handleClose}>
                 <Modal.Header closeButton>
-			    <Modal.Title>Modal heading</Modal.Title>
+			    <Modal.Title>{this.state.name}</Modal.Title>
 		        </Modal.Header>
 		        <Modal.Body>
                     Woohoo, you're reading this text in a modal!
