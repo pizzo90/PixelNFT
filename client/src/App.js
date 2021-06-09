@@ -3,13 +3,11 @@ import PixelContract from "./contracts/Pixel.json";
 import getWeb3 from "./getWeb3";
 import Axios from "axios";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Header from "./header";
-import FirstSection from "./firstsection";
-import SecondSection from "./secondsection.js";
-
-
-
+import Header from "./Header";
+import FirstSection from "./Firstsection";
+import PixelArea from "./Pixelarea";
 
 class App extends Component {
   state = { pixelsN: 0, web3: null, accounts: null, contract: null, pixelImages: null };
@@ -45,7 +43,6 @@ class App extends Component {
       let tokenURI = await contract.methods.tokenURI(index).call().then(
         res => {
           if(res.length > 0){
-            console.log(res);
             Axios.get(res).then(
               response => {
                  images.push(response.data.image); 
@@ -68,12 +65,77 @@ class App extends Component {
    
     return (
       <div className="App">
-      
       <Header/> 
       <FirstSection/>
-      <SecondSection/>
+      <section id="2-section">
+        <div className="container">
+        <h2 className="subTit">Lorem Ipsum</h2>
+          <div className="row d-flex">
+              <div className="col-md-6  align-c">
+                  <div className="txt-inner">
+                    <div className="Boxtextpixel">
+                        <div className="row icon-1">
+                        <hr></hr>
+                          <div className="col-md-12 mtop100 mbot100">
+                            <h2><b>Random color</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
 
-        <h1>Good to Go!</h1>
+                        <div className="row icon-2">
+                        <hr></hr>
+                          <div className="col-md-12  mtop100 mbot100">
+                            <h2><b>RGB colors</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+
+                        <div className="row icon-3">
+                        <hr></hr>
+                          <div className="col-md-12 mtop100 mbot100">
+                            <h2><b>1 PIXEL every day</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+
+
+                        <div className="row icon-2">
+                        <hr></hr>
+                          <div className="col-md-12  mtop100 mbot100">
+                            <h2><b>RGB colors</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+
+
+                     </div> 
+                   </div> 
+              </div> 
+              <div className="col-md-6 d-flex">
+                    <div className="ExaplePix"></div>
+              </div>   
+           </div>    
+        </div>
+      </section>
+
+      <section id="3-section">
+        <div className="container-fluid">
+          <div className="row"> 
+            <div className="pixel-content" id="pixels-grid">
+                <PixelArea/>
+              </div>    
+           </div>    
+        </div>
+      </section>
+      </div>
+    )}
+}
+
+export default App;
+
+
+/**
+ * <h1>Good to Go!</h1>
             <p>Connected to smart contract PIXELS [PxP].</p>
             <div>Number of created Pixels: {this.state.pixelsN}</div>
             <div className="Pixels">
@@ -87,9 +149,4 @@ class App extends Component {
                 } 
               })()}
             </div>
-      </div>
-   
-    )}
-}
-
-export default App;
+ */

@@ -6,17 +6,12 @@ export default class secondsection extends Component {
         return (
         <>
             <section id="2-section">
-                <div class="col-md-4">
+                <div className="col-md-4">
                 </div>    
-                <div class="col-md-8">
+                <div className="col-md-8">
                  </div>   
-
             </section>
-
-
-
-    </>
-
+        </>
         )
     }
 }
