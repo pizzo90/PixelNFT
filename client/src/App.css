@@ -35,13 +35,24 @@ section{
   max-width: 70px;
 }
 
-
+.align-c{
+  display: flex;
+  justify-content: center;
+}
+/* ----------------- margins  */
+  .mtop100{
+  margin-top: 100px !important;
+  }
+  .mbot100{
+    margin-bottom: 100px !important;
+    }
 /* ----------------- header */
 nav{
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  padding: 5px 15px;
 }
 .logo span{
 font-weight: 800;
@@ -55,12 +66,17 @@ padding: 10px 0px;
 .main-menu{
  max-width: 500px;
  float: right;
+ text-align: right;
 }
-.main-menu ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.main-menu img{
+  max-width: 120px;
+}
+.main-menu span{
+  display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    FONT-WEIGHT: 600;
+
 }
 .main-menu ul li {
   float: left;
@@ -163,21 +179,60 @@ button{
 }
 
 .ExaplePix{
-  width: 90%;
+  width: 300px;
+  height: 300px;
   aspect-ratio: 1;
   background-color: #0CAAD0;
+  position: sticky;
+  top:50px;
+  margin: 0 auto;
 }
 
+.row.icon-1:before {
+  content: '';
+  height: 80px;
+  width: 90px;
+  background: url(../src/images/random.svg);
+  position: absolute;
+  background-size: cover;
+  margin-top: -47px;
+  margin-left: -26px;
+}
+.row.icon-2:before {
+  content: '';
+  height: 85px;
+  width: 91px;
+  background: url(../src/images/rgb.png);
+  position: absolute;
+  background-size: cover;
+  margin-top: -47px;
+  margin-left: -26px;
+}
+.row.icon-3:before {
+  content: '';
+  height: 85px;
+  width: 91px;
+  background: url(../src/images/day.svg);
+  position: absolute;
+  background-size: cover;
+  margin-top: -47px;
+  margin-left: -26px;
+}
 
-
-
+hr:not([size]) {
+  background: #0baad0;
+  height: 5px !important;
+  border-radius: 10px ;
+  width: calc(100% -150px);
+  width: -moz-calc(100% - 150px);
+  width: -webkit-calc(100% - 150px);
+  margin-left: 100px;
+}
 /* ----------------- Pixel area */
 
 
 .pixel-content{
-  height: 70vh;
   width: 100%;
-  overflow: scroll;
   display: flex;
   flex-wrap: wrap;
   background: #eee;
@@ -192,7 +247,7 @@ button{
   width: 100px;
   margin: 15px;
   height: 100px;
-
+  box-shadow: 0px 2px 4px 0px #c7c7c7;
 }
 
 .minted{
@@ -201,6 +256,7 @@ button{
   width: 100px;
   margin: 15px;
   height: 100px;
+  box-shadow: 0px 2px 4px 0px #c7c7c7;
 }
 
 .pixel:nth-child(2n) {

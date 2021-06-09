@@ -6,8 +6,8 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./Header";
-import FirstSection from "./FirstSection";
-import PixelArea from "./PixelArea";
+import FirstSection from "./Firstsection";
+import PixelArea from "./Pixelarea";
 
 class App extends Component {
   state = { pixelsN: 0, web3: null, accounts: null, contract: null, pixelImages: null };
@@ -74,17 +74,45 @@ class App extends Component {
               <div className="col-md-6  align-c">
                   <div className="txt-inner">
                     <div className="Boxtextpixel">
-                        <div className="row d-flex">
-                          <div className="col-md-12 align-c">
+                        <div className="row icon-1">
+                        <hr></hr>
+                          <div className="col-md-12 mtop100 mbot100">
+                            <h2><b>Random color</b></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                           </div> 
                         </div> 
+
+                        <div className="row icon-2">
+                        <hr></hr>
+                          <div className="col-md-12  mtop100 mbot100">
+                            <h2><b>RGB colors</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+
+                        <div className="row icon-3">
+                        <hr></hr>
+                          <div className="col-md-12 mtop100 mbot100">
+                            <h2><b>1 PIXEL every day</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+
+
+                        <div className="row icon-2">
+                        <hr></hr>
+                          <div className="col-md-12  mtop100 mbot100">
+                            <h2><b>RGB colors</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          </div> 
+                        </div> 
+
+
                      </div> 
                    </div> 
               </div> 
-              <div className="col-md-6 align-c">
-                <div className="ExaplePix">
-                </div> 
+              <div className="col-md-6 d-flex">
+                    <div className="ExaplePix"></div>
               </div>   
            </div>    
         </div>
