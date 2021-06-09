@@ -1,4 +1,4 @@
-import { prototype } from '@truffle/hdwallet-provider';
+//import { prototype } from '@truffle/hdwallet-provider';
 import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal";
 import {CSSTransition} from 'react-transition-group';
