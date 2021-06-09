@@ -5,6 +5,8 @@ import Axios from "axios";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 import Header from "./Header";
 import FirstSection from "./Firstsection";
 import PixelArea from "./Pixelarea";
@@ -102,8 +104,11 @@ class App extends Component {
                         <div className="row icon-2">
                         <hr></hr>
                           <div className="col-md-12  mtop100 mbot100">
+                             
                             <h2><b>RGB colors</b></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          
+                          
                           </div> 
                         </div> 
 
@@ -119,9 +124,15 @@ class App extends Component {
       </section>
 
       <section id="3-section">
-        <div className="container-fluid">
+        <div className="container-fluid mtop100">
           <div className="row"> 
-            <div className="pixel-content" id="pixels-grid">
+              <div className="col-md-10 offset-md-1 text-center mtop100 Boxtextpixel">
+                <h2 class="subTit">Here there are 365 Pixels </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div> 
+            <div className="pixel-content mtop100" id="pixels-grid">
                 <PixelArea/>
               </div>    
            </div>    
