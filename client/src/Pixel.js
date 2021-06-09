@@ -1,4 +1,4 @@
-import { prototype } from '@truffle/hdwallet-provider';
+//import { prototype } from '@truffle/hdwallet-provider';
 import React, { Component } from 'react';
 import Modal from "react-bootstrap/Modal";
 import {CSSTransition} from 'react-transition-group';
@@ -38,7 +38,7 @@ export default class Pixel extends Component {
         if(!this.state.minted){
             return(
             <div className="pixel-wrapper">
-                <div className="pixel skeleton" key={this.state.id}>
+                <div className="skeleton" key={this.state.id}>
                 </div>
             </div>
             )
@@ -47,7 +47,7 @@ export default class Pixel extends Component {
         <div className="pixel-wrapper">
             <CSSTransition appear={true} in={true} timeout={2000} classNames="fade">
             <div 
-                className="pixel-minted" 
+                className="minted" 
                 style={
                     {
                     width: '100px', 
