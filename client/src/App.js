@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./Header";
 import FirstSection from "./Firstsection";
+import Footer from "./Footer";
 import PixelArea from "./Pixelarea";
 
 class App extends Component {
@@ -63,6 +64,10 @@ class App extends Component {
     let pixelsNumber = await contract.methods.getNumberOfPixels().call();
     this.setState({ pixelsN: pixelsNumber, pixelImages: images });
   };
+
+
+
+
   render() {
    
     return (
@@ -75,12 +80,14 @@ class App extends Component {
           <div className="row d-flex">
               <div className="col-md-6  align-c">
                   <div className="txt-inner">
-                    <div className="Boxtextpixel">
+                  <div className="Boxtextpixel">
                         <div className="row icon-1">
                         <hr></hr>
                           <div className="col-md-12 mtop100 mbot100">
                             <h2><b>Random color</b></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <p>The single color of the pixel is generated randomly.<br></br>
+                            Chance is the only legitimate ruler of the universe.
+                            (Honoré de Balzac)</p>
                           </div> 
                         </div> 
 
@@ -96,7 +103,7 @@ class App extends Component {
                         <hr></hr>
                           <div className="col-md-12 mtop100 mbot100">
                             <h2><b>1 PIXEL every day</b></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <p>A new pixel will be created every day. for a limited time.</p>
                           </div> 
                         </div> 
 
@@ -111,8 +118,6 @@ class App extends Component {
                           
                           </div> 
                         </div> 
-
-
                      </div> 
                    </div> 
               </div> 
@@ -123,24 +128,43 @@ class App extends Component {
         </div>
       </section>
 
-      <section id="3-section">
+
+      
+
+      <section id="3section">
         <div className="container-fluid mtop100">
           <div className="row"> 
-              <div className="col-md-10 offset-md-1 text-center mtop100 Boxtextpixel">
+              <div className="col-md-10 offset-md-1 text-center mtop100 Boxtextpixel2">
                 <h2 class="subTit">Here there are 365 Pixels </h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div> 
-            <div className="pixel-content mtop100" id="pixels-grid">
+            <div className="pixel-content mtop100" id="pixels-grid" style={{backgroundcolor: this.state.color}}>
                 <PixelArea/>
               </div>    
            </div>    
         </div>
       </section>
+
+
+ 
+          <Footer/>
+      
+
       </div>
+
+
+
+
+
     )}
 }
+
+
+
+
+
 
 export default App;
 

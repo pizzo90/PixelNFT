@@ -3,9 +3,7 @@
 body,h1,h2,h3,h4,p{
   font-family: 'Nunito Sans', sans-serif;
 }
-.App{
-  overflow: hidden !important;
-}
+
 
 
 .App-logo {
@@ -41,6 +39,9 @@ section{
 .align-c{
   display: flex;
   justify-content: center;
+}
+.text-right{
+  text-align: right;
 }
 /* ----------------- margins  */
   .mtop100{
@@ -94,6 +95,7 @@ padding: 10px 0px;
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 #main-home:before{
   content: '';
@@ -133,6 +135,10 @@ button{
   font-size: 1.2em;
   border: 0px;
   margin-top: 1em;
+}
+
+section#main-home .container-fuid{
+  overflow: hidden;
 }
 
 
@@ -188,10 +194,18 @@ button{
 .Boxtextpixel p{
   font-size: 1.5em;
 }
+.Boxtextpixel2 p{
+  font-size: 1.5em;
+}
 .Boxtextpixel .row{
   margin: 1em 0em;
 }
 
+.Boxtextpixel h2{
+  font-weight: 800;
+    color: #006fbf;
+    font-size: 42px;
+}
 
 .subTit{
   font-weight: 800;
@@ -204,6 +218,7 @@ button{
   height: 300px;
   aspect-ratio: 1;
   background-color: #0CAAD0;
+  position: -webkit-sticky;
   position: sticky;
   top:50px;
   margin: 0 auto;
@@ -251,12 +266,14 @@ hr:not([size]) {
 }
 /* ----------------- Pixel area */
 
-
+#3section{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(232,232,232,1) 100%);
+}
 .pixel-content{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: #eee;
   justify-content: center;
  
 }
@@ -269,7 +286,7 @@ hr:not([size]) {
   margin: 15px;
   box-shadow: 0px 2px 4px 0px #c7c7c7;
 }
-
+.pixel-content
 .minted{
   background: #70E0B9;
   width: 80px !important;
@@ -291,9 +308,26 @@ hr:not([size]) {
     transition: opacity 2000ms ease-in;
 }
 
+/* ----------------- Footer */
+
+.logo-footer{
+font-weight: 800;
+color: white;
+font-size: 1.5em;
+}
+footer{
+  padding: 20px 0px;
+  background-color: #0CAAD0;
+}
+.insta-foo{
+  width: 50px;
+  height: 40px;
+
+}
+
 
 /* ----------------- Responsive */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 727px) {
   .main-tit{
     font-size: 8em;
   }
@@ -302,6 +336,9 @@ hr:not([size]) {
   .row.icon-3:before,
   .row.icon-4:before {
     margin-left: 0px;
+  }
+  .App{
+    overflow: hidden !important;
   }
 
 }
